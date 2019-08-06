@@ -9,3 +9,11 @@ var greet = function() {
   // TODO: change this to change the guest html text and is this recursive-loop problematic?
 
 window.onload = greet();
+
+var guess = function() {
+  console.log('guess firing');
+};
+
+//TODO: research says onClick best to use now, accurate?
+document.getElementById('guess-button').onclick = function() {guess();}
+;
