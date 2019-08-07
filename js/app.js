@@ -8,7 +8,6 @@ var greet = function() {
   console.log('greet ran');
 
 };
-// TODO: update this to change the guest html text below page header, and is this recursive-loop problematic?
 
 window.onload = greet();
 
@@ -39,7 +38,6 @@ var guess = function() {
   window.confirm('Not bad! You got '+ score + ' out of 5 correct.');
 };
 
-//TODO: research says onClick best to use now, accurate?
 document.getElementById('guess-button').onclick = function() {
   guess();
   console.log('guess firing');
