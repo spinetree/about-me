@@ -30,7 +30,7 @@ var guess = function() {
 
   var score = 0;
 
-  //loop through questions, ask each, scrub user input and compare the value there to the answers array.
+  //T/F questions: loop through questions, ask each, scrub user input and compare the value there to the answers array.
 
   //FIXME: set this i back to 4 so the questions run after debugging
   for (var i=0; i < 0; i++) {
@@ -45,6 +45,7 @@ var guess = function() {
     }
   }
 
+  // number guessing game - start with 6 guesses, ffs use parseint to see if there's a number and if not throw an error
   var guesses = 6;
   while (guesses > 0) {
     answer = parseInt(window.prompt('Can you guess how freaking ancient I am? You have ' + guesses +' guesses left'));
@@ -62,7 +63,7 @@ var guess = function() {
       console.log(answer);
     } else {
       window.confirm('I\'m not sure that\'s even a number bruh.');
-      guesses = 0;}
+      guesses--;}
     console.log(answer);
   }
 };
