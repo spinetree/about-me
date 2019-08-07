@@ -1,0 +1,81 @@
+/* typography */
+body {
+    font-family: 'Helvetica, Arial, sans-serif';
+}
+
+header {
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: .75px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 45px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+li {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0 0 16px;
+}
+
+/* layout */
+
+body {
+    background: #444;
+}
+
+header {  
+    margin-top:24px;  
+}
+
+main, header {
+    width: 75%;
+    max-width: 960px;
+    padding: 16px;
+    margin: 36px auto;
+    background: #dedede;
+}
+
+section {
+    display: flex;
+}
+
+
+article {
+    padding: 8px;
+    margin: 8px;
+}
+
+.game {text-align:center; padding:16px; border-top:2px solid #666; margin-top:24px;}
+
+/* specific elements */
+
+button {
+    padding: 16px 32px;
+    font-size:24px;
+    margin: 16px 0;
+    background: #333;
+    color: #dedede;
+}
