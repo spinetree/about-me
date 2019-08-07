@@ -23,7 +23,7 @@ var guess = function() {
   console.log('guess finished');
 
   var score = 0;
-  
+
   //loop through questions, ask each, scrub user input and compare the value there to the answers array.
   for (var i=0; i < questions.length; i++) {
     var answer = window.prompt('True or false: ' +questions[i]);
@@ -35,7 +35,7 @@ var guess = function() {
     else {
       window.confirm('NOPE.');
     }
-  };
+  }
   window.confirm('Not bad! You got '+ score + ' out of 5 correct.');
 };
 
