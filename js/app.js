@@ -9,7 +9,7 @@ var greet = function() {
   console.log('greet ran');
 };
 
-//FIXME:uncomment for debug
+//FIXME: commented out for debug
 // window.onload = greet();
 
 var guess = function() {
@@ -27,22 +27,22 @@ var guess = function() {
   var score = 0;
 
 
-  window.confirm('I\'m going to ask you some questions about me. See if you can guess the answers.');
+  window.alert('I\'m going to ask you some questions about me. See if you can guess the answers.');
 
 
   console.log('score: ' + score);
 
 
   //T/F questions: loop through questions, ask each, scrub user input and compare the value there to the answers array.
-  for (var i=0; i < 4; i++) {
+  for (var i=0; i < 5; i++) {
     var answer = window.prompt('True or false: ' +questions[i]);
     var cleanAnswer = answer.charAt(0).toUpperCase();
     console.log(cleanAnswer);
     if (cleanAnswer === tfAnswers[i]) {
-      window.confirm('Correct!');
+      window.alert('Correct!');
       score++;}
     else {
-      window.confirm('NOPE.');
+      window.alert('NOPE.');
     }
   }
   console.log('score: ' + score);
@@ -52,17 +52,17 @@ var guess = function() {
   while (guesses > 0) {
     answer = parseInt(window.prompt('Can you guess how freaking ancient I am? You have ' + guesses +' guesses left'));
     if (answer === 37) {
-      window.confirm('YUP. WTH RIGHT?');
+      window.alert('YUP. WTH RIGHT?');
       guesses = 0;
       score ++;
     } else if (answer < 37) {
-      window.confirm('OLDER. Try again. You have ' + guesses +' guesses left');
+      window.alert('OLDER. Try again. You have ' + guesses +' guesses left');
       guesses --;
     } else if (answer > 37) {
-      window.confirm('Okay not *that* old ffs. Try again. You have ' + guesses +' guesses left');
+      window.alert('Okay not *that* old ffs. Try again. You have ' + guesses +' guesses left');
       guesses --;
     } else {
-      window.confirm('I\'m not sure that\'s even a number bruh.');
+      window.alert('I\'m not sure that\'s even a number bruh.');
       guesses--;}
   }
   console.log('score: ' + score);
@@ -78,12 +78,12 @@ var guess = function() {
       guesses = 0;
     } else {
       guesses--;
-      window.confirm('No, try again. Be sure to capitalize country names.');
+      window.alert('No, try again. Be sure to capitalize country names.');
     }
   }
   console.log('score: ' + score);
 
-  window.confirm('Not bad! You got '+ score + ' out of 7 correct.');
+  window.alert('Not bad! You got '+ score + ' out of 7 correct.');
 
 };
 
