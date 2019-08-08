@@ -32,10 +32,14 @@ h3 {
 p {
     font-size: 16px;
     line-height: 20px;
-    margin-top:16px;
+    margin-top: 16px;
 }
 
 ul {}
+
+ol {
+    list-style: lower-roman;
+}
 
 li {
     font-size: 14px;
@@ -43,13 +47,13 @@ li {
     margin: 16px 0 16px 20px;
 }
 
-li:before {
+ul li:before {
     font-family: "Font Awesome 5 Pro";
     content: '\f06d';
-    margin:0 5px 0 -14px;
+    margin: 0 5px 0 -14px;
     color: #333;
-    font-size:12px;
-    font-weight:600;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 /* layout */
@@ -87,11 +91,13 @@ article {
     border: 2px solid #666;
     border-width: 2px 0;
     margin-top: 24px;
-    display:block;
-    width:100%;
+    display: block;
+    width: 100%;
 }
 
-.fa {font-family: "Font Awesome 5 Pro";}
+.fa {
+    font-family: "Font Awesome 5 Pro";
+}
 
 /* specific elements */
 
@@ -102,4 +108,3 @@ button {
     background: #333;
     color: #dedede;
 }
-
