@@ -12,3 +12,7 @@ v2 planned features:
 - improved css styling
 
 updated Wednesday 8/7
+
+08/08 updates:
+- new functions
+- Ewa the Driver and Steve the Navigator 
