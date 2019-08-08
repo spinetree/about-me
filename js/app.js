@@ -23,17 +23,18 @@ var guess = function() {
   var questions = ['I used to be a mime','There\'s a piece of plastic lodged in my knuckle from when I was a kid and crashed a big wheel','I grew up calling all soda \'pop\'','I can eat fifty eggs','My brother runs a vineyard in the finger lakes.' ];
   var tfAnswers = ['T','F','T','F','F'];
   var numAnswers = 37;
-  var countryAnswers = ['ireland','england','germany','france','switzerland','costa rica','panama','austraila','peru','mexico','canada'];
-
-  window.confirm('I\'m going to ask you some questions about me. See if you can guess the answers.');
-  console.log('guess finished');
-
+  var countryAnswers = ['Ireland','England','Germany','France','Switzerland','Costa Rica','Panama','Austraila','Peru','Mexico','Canada'];
   var score = 0;
 
-  //T/F questions: loop through questions, ask each, scrub user input and compare the value there to the answers array.
 
-  //FIXME: set this i back to 4 so the questions run after debugging
-  for (var i=0; i < 0; i++) {
+  window.confirm('I\'m going to ask you some questions about me. See if you can guess the answers.');
+
+
+  console.log('score: ' + score);
+
+
+  //T/F questions: loop through questions, ask each, scrub user input and compare the value there to the answers array.
+  for (var i=0; i < 4; i++) {
     var answer = window.prompt('True or false: ' +questions[i]);
     var cleanAnswer = answer.charAt(0).toUpperCase();
     console.log(cleanAnswer);
@@ -44,9 +45,10 @@ var guess = function() {
       window.confirm('NOPE.');
     }
   }
+  console.log('score: ' + score);
 
   // number guessing game - start with 6 guesses, ffs use parseint to see if there's a number and if not throw an error
-  var guesses = 6;
+  var guesses = 4;
   while (guesses > 0) {
     answer = parseInt(window.prompt('Can you guess how freaking ancient I am? You have ' + guesses +' guesses left'));
     if (answer === 37) {
@@ -56,23 +58,35 @@ var guess = function() {
     } else if (answer < 37) {
       window.confirm('OLDER. Try again. You have ' + guesses +' guesses left');
       guesses --;
-      console.log(answer);
     } else if (answer > 37) {
       window.confirm('Okay not *that* old ffs. Try again. You have ' + guesses +' guesses left');
       guesses --;
-      console.log(answer);
     } else {
       window.confirm('I\'m not sure that\'s even a number bruh.');
       guesses--;}
-    console.log(answer);
   }
-};
+  console.log('score: ' + score);
+  //country guessing
+  guesses = 6;
 
-//FIXME: uncomment this to run again
-//window.confirm('Not bad! You got '+ score + ' out of 7 correct.');
+  while (guesses > 0) {
+    answer = window.prompt('Can you guess a country I\'ve visited? (Don\'t say the US that\'s dumb.) ' + guesses + ' guesses remaining.');
+    if (countryAnswers.includes(answer)) {
+      var countryList = countryAnswers.join(', ');
+      confirm('Correct! You could have said: '+countryList);
+      score ++;
+      guesses = 0;
+    } else {
+      guesses--;
+      window.confirm('No, try again. Be sure to capitalize country names.');
+    }
+  }
+  console.log('score: ' + score);
+
+  window.confirm('Not bad! You got '+ score + ' out of 7 correct.');
+
+};
 
 document.getElementById('guess-button').onclick = function() {
   guess();
-  console.log('guess firing');
-}
-;
+};
