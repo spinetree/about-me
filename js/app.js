@@ -93,7 +93,8 @@ var guess = function() {
     }
     console.log('score: ' + score);
   }
-  // tFQuestion();
+  
+  tFQuestion();
   guessTheAge();
   guessCountries();
 
