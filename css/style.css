@@ -1,6 +1,6 @@
 /* typography */
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
 header {
@@ -11,22 +11,26 @@ h1,
 h2,
 h3 {
     letter-spacing: .75px;
-    font-weight: bold;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 64px;
     line-height: 45px;
+    font-weight: 200;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .75px;
 }
 
 h3 {
     font-size: 16px;
     line-height: 20px;
+
 }
 
 p {
@@ -59,25 +63,26 @@ ul li:before {
 /* layout */
 
 body {
-    background: #444;
+    background: lightslategray;
 }
 
-header {
-    margin-top: 24px;
-}
+main {}
 
-main,
-header {
+header,
+section {
+    background: rgba(255, 255, 255, 0.4);
+    margin: 16px auto;
+    padding: 16px;
     width: 75%;
     max-width: 960px;
-    padding: 16px;
-    margin: 36px auto;
-    background: #dedede;
+    min-width: 320px;
+    box-shadow: 4px 4px 2px 2px rgba(0, 0, 0, 0.02);
+    border: 4px solid rgba(255, 255, 255, 0.2);
 }
 
-section {
-    display: flex;
-}
+header {}
+
+section {}
 
 
 article {
@@ -85,11 +90,31 @@ article {
     margin: 8px;
 }
 
+footer {
+    display: block;
+    background: #333;
+    padding: 24px;
+    text-align: center;
+    color: #888;
+}
+
+/* specific elements */
+
+header {
+    margin-top: 24px;
+    min-height: 200px;
+
+}
+
+header h1 {
+    line-height: 200px;
+    float: left;
+    margin-left: 24px;
+}
+
 .game {
     text-align: center;
     padding: 16px;
-    border: 2px solid #666;
-    border-width: 2px 0;
     margin-top: 24px;
     display: block;
     width: 100%;
@@ -99,7 +124,14 @@ article {
     font-family: "Font Awesome 5 Pro";
 }
 
-/* specific elements */
+.selfie {
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    object-fit: cover;
+    float: right;
+    margin: 16px;
+}
 
 button {
     padding: 16px 32px;
